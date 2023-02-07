@@ -1,0 +1,27 @@
+{% extends "FamilyApp/padre.html" %}
+
+
+{% block titulo %}
+Add weapons to the list!
+{% endblock%}
+
+{% block formulario %}
+</html> <form action="", method="POST"> {% csrf_token %}
+
+    <table>
+        
+        {{form1.as_table}}
+
+    </table>
+
+
+<input type="submit", value="send">
+        
+</form>
+{% endblock%}
+
+{% block imagen %}
+{% load static %}
+<img class="image" src="{% static 'FamilyApp/assets/img/weapons1.jpg' %}" alt="..." />
+{% endblock %}
+

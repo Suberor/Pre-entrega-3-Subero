@@ -1,0 +1,21 @@
+{% extends "FamilyApp/padre.html" %}
+
+{% block titulo %}
+
+<p> Results for spell name "{{busqueda}}" </p>
+
+{% endblock %}
+
+{% block buscar %}
+
+    
+{% for objeto in resultado %}
+
+    <li>
+
+        name: {{objeto.nombre}} school: {{objeto.escuela}}  level: {{objeto.nivel}}
+
+    </li>
+  
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "FamilyApp/padre.html" %}
+
+
+{% block titulo %}
+Add spells to the list!
+{% endblock%}
+
+{% block formulario %}
+</html> <form action="", method="POST"> {% csrf_token %}
+
+    <table>
+        
+        {{form1.as_table}}
+
+    </table>
+
+
+<input type="submit", value="enviar">
+        
+</form>
+{% endblock%}
+
+{% block buscar %}
+
+buscar hechizos:
+
+<form action="/FamilyApp/resultados/", method="GET">
+            
+    <input type="text" name="nombre" id="nombre">
+    <input type="submit" name="buscar">
+    
+</form>
+
+{% endblock %}
+
+{% block imagen %}
+{% load static %}
+<img class="image" src="{% static 'FamilyApp/assets/img/fefb904e03e0be7d1cc92dc85c1ca0bd.jpg' %}" alt="..." />
+{% endblock %}
+
